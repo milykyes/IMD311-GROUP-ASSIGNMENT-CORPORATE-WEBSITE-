@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huda Cakes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f3f1ef;
+            font-family: arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        nav {
+            background-color: #887c61;
+            padding: 17px 15px;
+            width: 100%;
+            overflow: hidden;
+        }
+        nav a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 90px;
+            padding: 16px 30px; 
+            font-weight: bold;
+            font-size: 26px;
+        }
+        nav a:hover {
+            text-decoration: none;
+        }
+        nav a:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            bottom: 0;
+            left: 0;
+        }
+        .logo{
+            width: 100px;
+            height: 100px; 
+            position: absolute;
+            right: 40%;
+            left: 40%;
+            top:-0%;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 400px;
+            height: 350px;
+            margin: 50px 0;
+        }
+        .button-container {
+            margin: 0 0 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4f4c4f;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            justify-content: center;
+            font-size: 20px;
+        }
+          /* Slideshow container */
+      .slideshow-container{
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+      }
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: rgb(22, 22, 22);
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(197, 177, 177, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #2b2626;
+        font-size: 16px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #2b2626;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #070707;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+      .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #6b5536;
+            padding: 19px;
+            margin: 10vh 0 0;
+        }
+
+        .footer-section {
+            flex: 10;
+            padding: 2px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+        }
+      </style>
+</head>
+<body>
+   
+    <nav>
+		
+        <div class="logo">
+          <a href=""><img src="images/logo.png" width="80" height="80" </a>
+        </div>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <br><br>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/cakeee.png" style="width:100%">
+          <div class="text">CAKE</div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/kuih.png" style="width:100%">
+          <div class="text">KUIH RAYA</div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/biss.png" style="width:100%">
+          <div class="text">CREPE</div>
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+        </div>
+        <br>
+    
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+<br>
+
+<div class="button-container">
+   <a href="contact.html" class="button">ORDER NOW</button></a>
+</div>
+</body>
+
+<footer>
+  <div class="footer">
+    <div class="footer-section">
+      <h3>OPENING HOURS</h3>
+      <p>Sun-Thu: 9:00am - 6:00pm</p>
+      <p>Sat: 10:00am - 5:00pm</p>
+    </div>
+
+    <div class="footer-section">
+        <h3>OUR OUTLETS</h3>
+        <p>Lot 11610 B, Jalan Terengganu, Putera Jaya, 22100 Permaisuri, Terengganu </p>
+        <P>PT11133, Perkedaian, Kampung Wakaf Tengah, 21030 Kuala Nerus, Terengganu.</P>
+    </div>
+
+    <div class="footer-section">
+        <h3>CONTACT US</h3>
+        <p>014-5413-024</p></a>
+    </div>
+</div>
+</footer>
+    </html>
